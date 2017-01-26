@@ -1,0 +1,31 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+
+  vars:
+    aws_environment: staging
+    server_name: webinarVM
+
+  tasks:
+    - name: Create new EC2 servers
+      ec2:
+        key_name: orangex
+        instance_type: t2.micro
+        image: ami-1e299d7e
+        wait: yes
+        wait_timeout: 500
+        count: 1
+        group: 
+        region: us-west-2
+        instance_tags:
+          Name: "{{ server_name }}"
+          Environment: "{{ aws_environment }}"
+
+        vpc_subnet_id: subnet-24ce1743
+        assign_public_ip: yes
+      register: ec2_info
+
+    #- name: pretend
+    #  print: ec2_info['']
+
+    - debug: var=ec2_info

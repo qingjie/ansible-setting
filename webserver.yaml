@@ -1,0 +1,21 @@
+---
+- hosts: tag_{{ tag }}_{{ value }}
+  become: True
+  user: ec2-user
+
+  vars:
+    tag: Environment
+    value: staging
+
+  tasks:
+    - name: Install The Apache Web servers
+      apt: name=apache2 update_cache=yes state=lastest
+
+    - name: Download HTML file to /var/www/html/index.html
+      get_url: url="https://s3-us-west-2.amazonaws.com/qingjie/index.html" dest="/var/www/html/index.html " force=yes
+      notify:
+        - restart apache2
+
+    handlers:
+      - name: restart apache2
+        service: name=apache2 state=restarted

@@ -1,0 +1,7 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+
+  tasks:
+    - name: Upload file to S3
+      s3: bucket=qingjie object=index.html src=./index.html mode=put permission=public-read

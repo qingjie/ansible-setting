@@ -1,0 +1,22 @@
+---
+- hosts: tag_{{ tag }}_{{ value }}
+  become: True
+  user: ec2-user
+
+  vars:
+    tag: Environment
+    value: staging
+
+  tasks:
+    - name: Install nginx
+      yum: name={{item}}
+      with_items:
+        - http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+
+    # enabled=0
+    - replace: dest=/etc/yum.repos.d/{{item}} regexp="enabled *= *1" replace="enabled=0"
+      with_items:
+        - nginx.repo
+    - yum: name=nginx
+    - command: chkconfig nginx on
+    - command: service nginx restart

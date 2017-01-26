@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "hostvars": {
+      "52.25.117.162": {
+        "ansible_ssh_host": "52.25.117.162", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "782488150291", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "xvda": "vol-00e30fbb3de1c77da"
+        }, 
+        "ec2_client_token": "Wolwe1484777518989", 
+        "ec2_dns_name": "ec2-52-25-117-162.us-west-2.compute.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-0d05cfc6b6b0d5c00", 
+        "ec2_image_id": "ami-1e299d7e", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "52.25.117.162", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "orangex", 
+        "ec2_launch_time": "2017-01-18T22:11:59.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-west-2a", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-22-167.us-west-2.compute.internal", 
+        "ec2_private_ip_address": "172.31.22.167", 
+        "ec2_public_dns_name": "ec2-52-25-117-162.us-west-2.compute.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-west-2", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/xvda", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-81963ff9", 
+        "ec2_security_group_names": "launch-wizard-1", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-24ce1743", 
+        "ec2_tag_Name": "webserver1", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-97de64f0"
+      }
+    }
+  }, 
+  "ami_1e299d7e": [
+    "52.25.117.162"
+  ], 
+  "ec2": [
+    "52.25.117.162"
+  ], 
+  "i-0d05cfc6b6b0d5c00": [
+    "52.25.117.162"
+  ], 
+  "key_orangex": [
+    "52.25.117.162"
+  ], 
+  "security_group_launch_wizard_1": [
+    "52.25.117.162"
+  ], 
+  "tag_Name_webserver1": [
+    "52.25.117.162"
+  ], 
+  "type_t2_micro": [
+    "52.25.117.162"
+  ], 
+  "us-west-2": [
+    "52.25.117.162"
+  ], 
+  "us-west-2a": [
+    "52.25.117.162"
+  ], 
+  "vpc_id_vpc_97de64f0": [
+    "52.25.117.162"
+  ]
+}

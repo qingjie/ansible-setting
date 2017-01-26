@@ -1,0 +1,3 @@
+- include: new_server.yaml
+- include: upload_to_s3.yaml
+- include: webserver.yaml

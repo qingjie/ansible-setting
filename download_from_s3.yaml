@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+  connection: local
+
+  tasks:
+    - name: Download file from S3 to EC2
+      get_url: url="https://s3-us-west-2.amazonaws.com/qingjie/index.html" dest="/home/ec2-user/qingjie/" force=yes
